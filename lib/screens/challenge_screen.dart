@@ -79,10 +79,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       setState(() {
         _isPlayingAudio = false;
         // Mantém _audioFinished como true
-        // Se ainda não respondeu, reinicia o cronômetro
-        if (!_hasAnswered) {
-          _audioFinishedTime = DateTime.now();
-        }
+        // NÃO reinicia o cronômetro - mantém o tempo da primeira reprodução
       });
     });
   }
